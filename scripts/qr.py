@@ -78,6 +78,6 @@ if __name__ == "__main__":
     create_url_qcodes()
     # create_vcard_qcode()
     # rene
-    create_wifi_qcode(ssid=input("WIFI SSID:"), password=getpass())
+    # create_wifi_qcode(ssid=input("WIFI SSID:"), password=getpass())
     # osparc
     # create_url_invitation(code="1234")
