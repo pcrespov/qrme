@@ -30,7 +30,8 @@ def create_vcard_qcode():
     qrcode.save(outfile)
 
 
-def create_url_qcodes():
+def create_url_qcodes(ext=".png"):
+    ext = ext.strip(".")
     for name, url in [
         ("demo1", "https://pcrespov.github.io/qrme/"),
         ("ytb_losgallardos", "https://youtu.be/ToriXXzdrqM"),
@@ -49,11 +50,11 @@ def create_url_qcodes():
     ]:
         qrcode = segno.make(url)
         # standard version
-        qrcode.save(f"{name}.qr.pdf")
+        qrcode.save(f"{name}.qr.{ext}", scale=10)
         # artistic version
         qrcode.to_artistic(
             background=f"{ASSETS_DIR}/s1ng-avatar.jpg",
-            target=f"{name}.art.qr.pdf",
+            target=f"{name}.art.qr.{ext}",
             scale=10,
         )
 
