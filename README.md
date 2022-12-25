@@ -1,2 +1,3 @@
 # qrme
-playground for qr codes
+
+Playground for qr codes
